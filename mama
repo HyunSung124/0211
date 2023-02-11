@@ -1,0 +1,61 @@
+#옹알2 내방법
+# def solution(babbling):
+#     answer = 0
+#     can = ["aya", "ye", "woo", "ma"]
+#     for bab in babbling:
+#         d = bab
+#         for i in d:
+#             d = d.split()
+#             if i == can:
+#                 if d[i] != d[i+1]:
+#                     answer += 1
+#                 else:
+#                     break
+#
+#     return answer
+# babbling  = ["aya", "yee", "u", "maa"]
+# print(solution(babbling))
+
+
+# def solution(babbling):
+#     answer = 0
+#     can = ["aya", "ye", "woo", "ma"]
+#     for b in babbling:
+#         bab = b
+#         for c in can:
+#             if c*2 in bab:
+#                 break
+#             if c in bab:
+#                 bab = bab.replace(c,'1')
+#         if bab.isdight():
+#             answer += 1
+#     return answer
+# babbling = ["aya", "yee", "u", "maa"]
+# print(solution(babbling))
+
+
+
+
+#백준 1032
+# a = int(input())
+# command = []
+# for _ in range(a):
+#     string = input()
+#     if len(command) == 0:
+#         command = list(string)
+#     else:
+#         for i in range(len(string)):
+#             if string[i] != command[i]:
+#                 command[i] = '?'
+# print(''.join(command))
+
+
+#백준 1051
+#길이가 5인 정사각형의 네 꼭짓점
+#matrix[x][y], matrix[x+4][y], matrix[x][y+4], matrix[x+4][y+4]
+n, m = map(int, input().split())
+matrix = []
+for i in range(n):
+    tmp = list(map(int, list(input())))
+    matrix.append(tmp)
+    for j in matrix:
